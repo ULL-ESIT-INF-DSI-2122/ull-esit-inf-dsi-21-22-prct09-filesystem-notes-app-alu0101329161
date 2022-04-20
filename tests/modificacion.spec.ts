@@ -8,9 +8,9 @@ let rest = new RestReduce(1, 2, 3, 4);
 
 describe('tests', () => {
   it('test addReduce', () => {
-    expect(add.run()).to.eql(10);
+    expect(add.run(Math.sqrt)).to.eql(6.146264369941973);
   });
   it('test restReduce', () => {
-    expect(rest.run()).to.eql(-10);
+    expect(rest.run(Math.sqrt)).to.eql(-6.146264369941973);
   });
 });
