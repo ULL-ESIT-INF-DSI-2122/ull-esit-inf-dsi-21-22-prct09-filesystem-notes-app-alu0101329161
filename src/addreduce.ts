@@ -35,8 +35,8 @@ export class AddReduce extends ReduceAlgoritmo {
 }
 
 
-function clienteSuma(addReduce: AddReduce) {
+/* function clienteSuma(addReduce: AddReduce) {
   addReduce.run();
 }
   
-clienteSuma(new AddReduce(1, 2, 3, 4));
+clienteSuma(new AddReduce(1, 2, 3, 4)); */

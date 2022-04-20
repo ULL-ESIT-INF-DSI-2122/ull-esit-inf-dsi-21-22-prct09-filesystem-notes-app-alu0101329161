@@ -35,8 +35,8 @@ export class RestReduce extends ReduceAlgoritmo {
 }
 
 
-function clienteResta(restReduce: RestReduce) {
+/* function clienteResta(restReduce: RestReduce) {
   restReduce.run();
 }
   
-clienteResta(new RestReduce(1, 2, 3, 4));
+clienteResta(new RestReduce(1, 2, 3, 4)); */
