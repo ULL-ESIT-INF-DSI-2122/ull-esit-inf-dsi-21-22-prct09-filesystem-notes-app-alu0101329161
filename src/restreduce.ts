@@ -33,3 +33,10 @@ export class RestReduce extends ReduceAlgoritmo {
     console.log("La resta se ha completado");
   }
 }
+
+
+/* function clienteResta(restReduce: RestReduce) {
+  restReduce.run();
+}
+  
+clienteResta(new RestReduce(1, 2, 3, 4)); */
