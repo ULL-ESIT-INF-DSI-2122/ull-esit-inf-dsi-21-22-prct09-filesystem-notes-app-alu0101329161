@@ -33,10 +33,3 @@ export class AddReduce extends ReduceAlgoritmo {
     console.log("La suma se ha completado");
   }
 }
-
-
-function clienteSuma(addReduce: AddReduce) {
-  addReduce.run();
-}
-  
-clienteSuma(new AddReduce(1, 2, 3, 4));
