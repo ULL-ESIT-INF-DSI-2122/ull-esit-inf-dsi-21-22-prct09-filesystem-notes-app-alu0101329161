@@ -4,7 +4,7 @@ import {ManejarNotas} from "../src/Notas/manejarNotas";
 import * as fs from "fs";
 
 // Vaciamos la base de datos
-fs.rmSync(`BaseDatosNotas/User1`, { recursive: true });
+// fs.rmSync(`BaseDatosNotas/User1`, { recursive: true });
 
 const manejarNotas = new ManejarNotas();
 describe ("Pruebas clase ManejarNotas", () => {

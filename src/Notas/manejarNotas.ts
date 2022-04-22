@@ -47,7 +47,7 @@ export class ManejarNotas {
 
   listarNotas(usuario: string) {
     if (fs.existsSync(`BaseDatosNotas/${usuario}`) && 
-    fs.readdirSync(`BaseDatosNotas/${usuario}`).length >= 0) {
+    fs.readdirSync(`BaseDatosNotas/${usuario}`).length > 0) {
       fs.readdirSync(`BaseDatosNotas/${usuario}`).forEach((notas) => {
         const vaciarContenido = fs.readFileSync(`BaseDatosNotas/${usuario}/${notas}`);
         const stringNota = JSON.parse(vaciarContenido.toString());
