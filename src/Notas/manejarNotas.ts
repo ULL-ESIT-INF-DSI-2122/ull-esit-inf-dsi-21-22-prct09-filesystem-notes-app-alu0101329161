@@ -51,16 +51,26 @@ export class ManejarNotas {
       fs.readdirSync(`BaseDatosNotas/${usuario}`).forEach((notas) => {
         const vaciarContenido = fs.readFileSync(`BaseDatosNotas/${usuario}/${notas}`);
         const stringNota = JSON.parse(vaciarContenido.toString());
-        const nota = new Nota(stringNota.title, stringNota.body, stringNota.color);
-        try {
-          console.log(chalk.keyword(nota.getColor())(nota.getTitulo()));
-        } catch (_) {
-          console.log(chalk.cyan(nota.getTitulo()));
-        }
+        const nota = new Nota(stringNota.titulo, stringNota.cuerpo, stringNota.color);
+        console.log(chalk.keyword(nota.getColor())(nota.getTitulo()));
       });
       return true;
     } else {
       console.log(chalk.red("No se ha encontrado al usuario en la base de Datos"));
+      return false;
+    }
+  }
+
+  leerNota(usuario: string, titulo: string) {
+    if (fs.existsSync(`BaseDatosNotas/${usuario}/${titulo}.json`)) {
+      const vaciarContenido = fs.readFileSync(`BaseDatosNotas/${usuario}/${titulo}.json`);
+      const stringNota = JSON.parse(vaciarContenido.toString());
+      const nota = new Nota(stringNota.titulo, stringNota.body, stringNota.color);
+      console.log(chalk.keyword(nota.getColor())(nota.getTitulo()));
+      console.log(chalk.keyword(nota.getColor())(nota.getCuerpo()));
+      return true;
+    } else {
+      console.log(chalk.red("Nota no encontrada, pruebe con otro titulo"));
       return false;
     }
   }
