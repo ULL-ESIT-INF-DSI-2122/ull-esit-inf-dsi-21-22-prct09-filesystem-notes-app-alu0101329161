@@ -32,7 +32,7 @@ yargs.command({
   handler(argv) {
     if (typeof argv.usuario === 'string' && typeof argv.titulo === 'string' &&
     typeof argv.cuerpo === 'string' && typeof argv.color === "string") {
-      if (argv.color == 'rojo' || argv.color == 'verde' || argv.color == 'azul' || argv.color == 'amarillo' ) {
+      if (argv.color == 'red' || argv.color == 'green' || argv.color == 'blue' || argv.color == 'yellow' ) {
         manejadorNotas.añadirNota(argv.usuario, argv.titulo, argv.cuerpo, argv.color);
       }
     } else {
@@ -94,7 +94,7 @@ yargs.command({
   handler(argv) {
     if (typeof argv.usuario === 'string' && typeof argv.titulo === 'string' &&
     typeof argv.cuerpo === 'string' && typeof argv.color === "string") {
-      if (argv.color == 'rojo' || argv.color == 'verde' || argv.color == 'azul' || argv.color == 'amarillo' ) {
+      if (argv.color == 'red' || argv.color == 'green' || argv.color == 'blue' || argv.color == 'yellow' ) {
         manejadorNotas.modificarNota(argv.usuario, argv.titulo, argv.cuerpo, argv.color);
       }
     } else {
@@ -146,6 +146,5 @@ yargs.command({
     }
   },
 });
-
 yargs.parse();
 

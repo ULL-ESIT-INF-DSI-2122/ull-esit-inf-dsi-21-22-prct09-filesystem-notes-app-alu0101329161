@@ -47,7 +47,7 @@ export class ManejarNotas {
 
   listarNotas(usuario: string) {
     if (fs.existsSync(`BaseDatosNotas/${usuario}`) && 
-    fs.readdirSync(`BaseDatosNotas/${usuario}`).length > -1) {
+    fs.readdirSync(`BaseDatosNotas/${usuario}`).length >= 0) {
       fs.readdirSync(`BaseDatosNotas/${usuario}`).forEach((notas) => {
         const vaciarContenido = fs.readFileSync(`BaseDatosNotas/${usuario}/${notas}`);
         const stringNota = JSON.parse(vaciarContenido.toString());
@@ -65,7 +65,7 @@ export class ManejarNotas {
     if (fs.existsSync(`BaseDatosNotas/${usuario}/${titulo}.json`)) {
       const vaciarContenido = fs.readFileSync(`BaseDatosNotas/${usuario}/${titulo}.json`);
       const stringNota = JSON.parse(vaciarContenido.toString());
-      const nota = new Nota(stringNota.titulo, stringNota.body, stringNota.color);
+      const nota = new Nota(stringNota.titulo, stringNota.cuerpo, stringNota.color);
       console.log(chalk.keyword(nota.getColor())(nota.getTitulo()));
       console.log(chalk.keyword(nota.getColor())(nota.getCuerpo()));
       return true;
