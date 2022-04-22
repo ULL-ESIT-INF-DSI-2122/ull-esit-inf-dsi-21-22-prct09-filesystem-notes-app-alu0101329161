@@ -1,4 +1,3 @@
-
 /**
  * @class ReduceAlgoritmo
  */
@@ -17,7 +16,7 @@ export abstract class ReduceAlgoritmo {
     // Hook
     this.informacionArray();
 
-    this.almacen = this.operacionMap(callback)
+    this.almacen = this.operacionMap(callback);
 
     const aux = this.operacion();
 
@@ -43,7 +42,7 @@ export abstract class ReduceAlgoritmo {
    * Realizar la funcion por cada elemento del array
    * @param callback 
    */
-  protected operacionMap(callback: (s: number) => number){
+  protected operacionMap(callback: (s: number) => number) {
     const x: number[] = []; 
     this.almacen.forEach((s: number) => x.push(callback(s)));
     return x;
@@ -54,3 +53,4 @@ export abstract class ReduceAlgoritmo {
    */
   protected informacionReduce() {}
 }
+
