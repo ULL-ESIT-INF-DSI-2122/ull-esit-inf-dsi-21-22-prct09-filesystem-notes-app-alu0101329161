@@ -3,7 +3,6 @@
 ## **Índice**
  * [Tareas Previas](#dv1)
  * [Explicación de solucion diseñada](#dv2)
- * [Conclusión](#dv3)
 
 
 <div id='dv1'/>
@@ -31,7 +30,7 @@
 
 <div id='dv2'/>
 
-## Metodología de trabajo.
+## Explicación de solucion diseñada.
 
 El primer paso sería el desarrollo de la clase Notas para poder almacenar los valores que se nos indican en el enunciado en este caso se ha respetado el Single responsibility principle separando lo que es la clase encargada de almacenar el contenido de la nota con la clase encargada de impirmir/devolver el contenido de la nota de una manera que comentaremos más adelante. Para limitar los colores se ha introducido un ripo de dato que solo contempla los colores del enunciado.
 
