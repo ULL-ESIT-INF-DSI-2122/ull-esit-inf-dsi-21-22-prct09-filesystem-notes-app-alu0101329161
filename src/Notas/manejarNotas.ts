@@ -3,6 +3,9 @@ import {PrintNota} from "./imprimirNota";
 import * as fs from "fs";
 const chalk = require("chalk");
 
+/**
+ * Clase que permite manejar las notas
+ */
 export class ManejarNotas {
   añadirNota(usuario: string, titulo: string, cuerpo: string, color: typeColor) {
     if (!fs.existsSync(`BaseDatosNotas/${usuario}`)) {

@@ -147,6 +147,7 @@ yargs.command({
   },
 });
 
-
+// para poder procesar los argumentos pasados desde línea de comandos a la aplicación 
+// es importante que el punto de entrada o programa principal incluya la siguiente sentencia
 yargs.parse();
 
