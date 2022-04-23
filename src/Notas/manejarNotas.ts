@@ -20,7 +20,7 @@ export class ManejarNotas {
      * Comprobamos que el usuario exista
      */
     if (!fs.existsSync(`BaseDatosNotas/${usuario}`)) {
-      console.log(`${usuario} directory will be created`);
+      console.log(`${usuario} Directorio creado correctamente`);
 
       fs.mkdirSync(`BaseDatosNotas/${usuario}`, {
 

@@ -544,4 +544,13 @@ yargs.command({
 
 Con esto el usuario podrá introducir mediante linea de comando los diferentes flags para modificar, añadir, elimnar, listar y leer notas.
 
-Algunas pruebas de ejecución podrían ser las siguientes
+Algunas pruebas de ejecución podrían ser las siguientes:
+
+
+![](images/ejecucion.png)
+
+
+
+Coverage:
+
+![](images/coverage.png)
