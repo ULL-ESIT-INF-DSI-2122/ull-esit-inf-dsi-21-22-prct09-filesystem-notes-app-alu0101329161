@@ -2,8 +2,16 @@ const chalk = require("chalk");
 import * as yargs from 'yargs';
 import {ManejarNotas} from './manejarNotas';
 
+/**
+ * Instancia que nos permite controlar la base de datos
+ * con las notas
+ */
 const manejadorNotas = new ManejarNotas();
 
+/**
+ * Comando añadir que permite añadir una nota a un usuario
+ * especificando el titulo0, el cuerpo y el color
+ */
 yargs.command({
   command: 'añadir',
   describe: 'Añadir una nota',
@@ -41,6 +49,10 @@ yargs.command({
   },
 });
 
+/**
+ * Comando elimnar que permite eliminar una nota
+ * especificando el usuario y el titulo
+ */
 yargs.command({
   command: 'eliminar',
   describe: 'Eliminar una nota',
@@ -65,7 +77,10 @@ yargs.command({
   },
 });
 
-
+/**
+ * Comando modificar que permite modificar una nota a un usuario
+ * especificando el titulo0, el cuerpo y el color
+ */
 yargs.command({
   command: 'modificar',
   describe: 'Modificar una nota',
@@ -103,6 +118,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando listar que permite listar las notas de un usuario
+ */
 yargs.command({
   command: 'listar',
   describe: 'Listar todas las notas',
@@ -123,6 +141,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando leer que permite leer el contenido de una nota
+ */
 yargs.command({
   command: 'leer',
   describe: 'Leer una nota',
@@ -147,7 +168,7 @@ yargs.command({
   },
 });
 
-// para poder procesar los argumentos pasados desde línea de comandos a la aplicación 
+// Para poder procesar los argumentos pasados desde línea de comandos a la aplicación 
 // es importante que el punto de entrada o programa principal incluya la siguiente sentencia
 yargs.parse();
 

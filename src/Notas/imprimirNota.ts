@@ -21,7 +21,7 @@ export class PrintNota {
       '\n "color": \"' + this.nota.getColor() + "\"" +
       '\n}';
   
-    console.log(contenido);
+    // console.log(contenido);
     return contenido;
   }
 }

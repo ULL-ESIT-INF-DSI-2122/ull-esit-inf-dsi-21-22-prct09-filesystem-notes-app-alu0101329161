@@ -1,8 +1,9 @@
 {
     "entryPoints": [
-        "./src/modificacion.ts",
-        "./src/addreduce.ts",
-        "./src/restreduce.ts"
+        "./src/Notas/notas.ts",
+        "./src/Notas/manejarNotas.ts",
+        "./src/Notas/interfaz.ts",
+        "./src/Notas/imprimirNota.ts"
     ],
     "out": "./typedoc"
 }
