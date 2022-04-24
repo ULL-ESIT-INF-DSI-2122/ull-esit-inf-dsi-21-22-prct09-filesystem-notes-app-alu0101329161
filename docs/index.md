@@ -206,7 +206,7 @@ Una vez ya tenemos la clase que almacena la nota y la clase "imprime" la nota, n
      * Comprobamos que el usuario exista
      */
     if (!fs.existsSync(`BaseDatosNotas/${usuario}`)) {
-      console.log(`${usuario} directory will be created`);
+      console.log(`${usuario}  Directorio creado correctamente`);
       fs.mkdirSync(`BaseDatosNotas/${usuario}`, {
 
         recursive: true,
